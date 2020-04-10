@@ -36,39 +36,48 @@ continue 5
 expectPORTD 0x00
 checkResult
 
-test "Balanced-Under => PORTD: 0xF0"
+#00111100
+test "Balanced-Under => PORTD: 0x3C"
 setPINA 0x14
 setPINB 0x14
 setPINC 0x14
 continue 5
-expectPORTD 0xF0
+expectPORTD 0x3C
 checkResult
 
-#1011 1111 01 01
-test "Balanced-Over => PORTD: 0xF5"
+#10 1111 1101
+test "Balanced-Over => PORTD: 0xFD"
 setPINA 0xFF
 setPINB 0xFF
 setPINC 0xFF
 continue 5
-expectPORTD 0xF5
+expectPORTD 0xFD
 checkResult
 
-#0011 0010
-test "Unbalanced-Under => PORTD: 0x32"
+#1000 1110
+test "Unbalanced-Under => PORTD: 0x8E"
 setPINA 0x8C
 setPINB 0x00
 setPINC 0x00
 continue 5
-expectPORTD 0x32
+expectPORTD 0x8E
 checkResult
 
-#100 0110 0011
-test "Unbalanced-Over => PORTD: 0x63"
+#1 0001 1011
+test "Unbalanced-Over => PORTD: 0x1B"
 setPINA 0x8C
 setPINB 0x8C
 setPINC 0x00
 continue 5
-expectPORTD 0x63
+expectPORTD 0x1B
+checkResult
+
+test "PINA: 0x30, PINB: 0x30, PINC: 0x30 => PORTD: 0x91"
+setPINA 0x30
+setPINB 0x30
+setPINC 0x30
+continue 5
+expectPORTD 0x91
 checkResult
 
 # Report on how many tests passed/tests ran

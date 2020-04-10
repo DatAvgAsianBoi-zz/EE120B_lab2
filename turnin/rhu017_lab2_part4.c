@@ -25,8 +25,7 @@ int main(void) {
 	while(1){
 		PORTD = 0x00;		
 		totalWeight = PINA + PINB + PINC;
-		PORTD = totalWeight << 2;
-
+		PORTD = totalWeight & 0xFC;
 		if(totalWeight > 140)		
 			PORTD = PORTD | 0x01;
 		if((PINA - PINC) > 80 || (PINC - PINA) > 80)

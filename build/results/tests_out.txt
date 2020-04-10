@@ -3,5 +3,5 @@ Note: automatically using hardware breakpoints for read-only addresses.
 ======================================================
 Running all tests..."
 
-"All Empty => PORTD: 0x00"..."Balanced-Under => PORTD: 0xF0"..."Balanced-Over => PORTD: 0xF5"..."Unbalanced-Under => PORTD: 0x32"..."Unbalanced-Over => PORTD: 0x63"...======================================================
+"All Empty => PORTD: 0x00"..."Balanced-Under => PORTD: 0x3C"..."Balanced-Over => PORTD: 0xFD"..."Unbalanced-Under => PORTD: 0x8E"..."Unbalanced-Over => PORTD: 0x1B"..."PINA: 0x30, PINB: 0x30, PINC: 0x30 => PORTD: 0x91"...======================================================
 Remote doesn't know how to detach
